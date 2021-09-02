@@ -2,11 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hostel_space/views/Facilities/StudentRequest.dart';
-import 'package:hostel_space/views/Facilities/WardenCaretakerCommonHomepageFunctionns/ViewGatepassWarden.dart';
-import 'package:hostel_space/views/Facilities/WardenHomepageFunctionns/complaintWarden.dart';
+
 import 'package:image_picker/image_picker.dart';
 import '../WardenCaretakerCommonHomepageFunctionns/StudentsList.dart';
-import 'ViewGatepassRequestCaretaker.dart';
+
 import 'complaintCaretaker.dart';
 
 class CaretakerHomepage extends StatefulWidget {
@@ -19,7 +18,7 @@ class CaretakerHomepage extends StatefulWidget {
 }
 
 class _CaretakerHomepageState extends State<CaretakerHomepage> {
-  PickedFile _imageFile;
+  XFile _imageFile;
   final _picker = ImagePicker();
 
   @override
@@ -28,7 +27,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
       onWillPop: () => Future.value(false),
       child: Scaffold(
         body: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
+          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 45.0),
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -112,7 +111,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                   children: [
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.list_alt_rounded,
@@ -122,7 +121,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           "Student List",
@@ -164,7 +163,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                   children: [
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.person_add_alt_1_rounded,
@@ -174,7 +173,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
                                           "Student Request",
@@ -197,57 +196,57 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                   SizedBox(height: 15.0),
                   Row(
                     children: [
-                      Expanded(
-                        child: Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            GatepassRequest()));
-                              },
-                              child: Container(
-                                height: 275,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40.0),
-                                  color: Colors.blueAccent,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.meeting_room_rounded,
-                                          size: 75.0,
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Gatepass Request",
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      // Expanded(
+                      //   child: Column(
+                      //     children: [
+                      //       GestureDetector(
+                      //         onTap: () {
+                      //           Navigator.push(
+                      //               context,
+                      //               MaterialPageRoute(
+                      //                   builder: (context) =>
+                      //                       GatepassRequest()));
+                      //         },
+                      //         child: Container(
+                      //           height: 275,
+                      //           width: 300,
+                      //           decoration: BoxDecoration(
+                      //             borderRadius: BorderRadius.circular(40.0),
+                      //             color: Colors.blueAccent,
+                      //           ),
+                      //           child: Column(
+                      //             mainAxisAlignment: MainAxisAlignment.center,
+                      //             children: [
+                      //               Row(
+                      //                 mainAxisAlignment:
+                      //                     MainAxisAlignment.center,
+                      //                 children: [
+                      //                   Icon(
+                      //                     Icons.meeting_room_rounded,
+                      //                     size: 75.0,
+                      //                   ),
+                      //                 ],
+                      //               ),
+                      //               Row(
+                      //                 mainAxisAlignment:
+                      //                     MainAxisAlignment.center,
+                      //                 children: [
+                      //                   Text(
+                      //                     "Gatepass\nRequest",
+                      //                     style: TextStyle(
+                      //                         color: Colors.black,
+                      //                         fontSize: 20.0,
+                      //                         fontWeight: FontWeight.bold),
+                      //                   ),
+                      //                 ],
+                      //               )
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                       SizedBox(width: 10.0),
                       Expanded(
                         flex: 1,
@@ -273,7 +272,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                   children: [
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.all_inbox_rounded,
@@ -283,10 +282,10 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                          MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          "Student Complaint",
+                                          "Student\nComplaint",
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 20.0,
@@ -309,112 +308,104 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                 ],
               ),
             ),
-
             Row(
               children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      ViewGatepassWarden()));
-                        },
-                        child: Container(
-                          height: 275,
-                          width: 300,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40.0),
-                              color: Colors.amberAccent
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.meeting_room_rounded,
-                                    size: 75.0,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Gatepass List",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Expanded(
+                //   child: Column(
+                //     children: [
+                //       GestureDetector(
+                //         onTap: () {
+                //           Navigator.push(
+                //               context,
+                //               MaterialPageRoute(
+                //                   builder: (context) => ViewGatepassWarden()));
+                //         },
+                //         child: Container(
+                //           height: 275,
+                //           width: 300,
+                //           decoration: BoxDecoration(
+                //               borderRadius: BorderRadius.circular(40.0),
+                //               color: Colors.amberAccent),
+                //           child: Column(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Row(
+                //                 mainAxisAlignment: MainAxisAlignment.center,
+                //                 children: [
+                //                   Icon(
+                //                     Icons.meeting_room_rounded,
+                //                     size: 75.0,
+                //                   ),
+                //                 ],
+                //               ),
+                //               Row(
+                //                 mainAxisAlignment: MainAxisAlignment.center,
+                //                 children: [
+                //                   Text(
+                //                     "Gatepass List",
+                //                     style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 20.0,
+                //                         fontWeight: FontWeight.bold),
+                //                   ),
+                //                 ],
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 SizedBox(width: 10.0),
-                Expanded(
-                  child: Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      ComplaintWarden()));
-                        },
-                        child: Container(
-                          height: 275,
-                          width: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40.0),
-                            color: Colors.tealAccent,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.person_rounded,
-                                    size: 75.0,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Live Attendance",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Expanded(
+                //   child: Column(
+                //     children: [
+                //       GestureDetector(
+                //         onTap: () {
+                //           Navigator.push(
+                //               context,
+                //               MaterialPageRoute(
+                //                   builder: (context) => ComplaintWarden()));
+                //         },
+                //         child: Container(
+                //           height: 275,
+                //           width: 300,
+                //           decoration: BoxDecoration(
+                //             borderRadius: BorderRadius.circular(40.0),
+                //             color: Colors.tealAccent,
+                //           ),
+                //           child: Column(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Row(
+                //                 mainAxisAlignment: MainAxisAlignment.center,
+                //                 children: [
+                //                   Icon(
+                //                     Icons.person_rounded,
+                //                     size: 75.0,
+                //                   ),
+                //                 ],
+                //               ),
+                //               Row(
+                //                 mainAxisAlignment: MainAxisAlignment.center,
+                //                 children: [
+                //                   Text(
+                //                     "Live Attendance",
+                //                     style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 20.0,
+                //                         fontWeight: FontWeight.bold),
+                //                   ),
+                //                 ],
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
             SizedBox(
@@ -431,7 +422,7 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
                       },
                       child: Container(
                           decoration: BoxDecoration(
-                              color: Colors.deepPurple,
+                              color: Colors.blue,
                               borderRadius: BorderRadius.circular(30.0)),
                           width: MediaQuery.of(context).size.width,
                           padding: EdgeInsets.symmetric(vertical: 12.0),
@@ -464,8 +455,8 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
           CircleAvatar(
             backgroundImage: _imageFile == null
                 ? AssetImage(
-              "assets/addphoto.png",
-            )
+                    "assets/addphoto.png",
+                  )
                 : FileImage(File(_imageFile.path)),
             radius: 40.0,
           ),
@@ -474,7 +465,9 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
               right: 0.0,
               child: InkWell(
                 onTap: () {
-                  showModalBottomSheet(context: context, builder: ((builder) => bottomSheet()),
+                  showModalBottomSheet(
+                    context: context,
+                    builder: ((builder) => bottomSheet()),
                   );
                 },
                 child: Icon(
@@ -498,7 +491,8 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
       ),
       child: Column(
         children: <Widget>[
-          Text("Profile Photo",
+          Text(
+            "Profile Photo",
             style: TextStyle(
               fontSize: 20.0,
             ),
@@ -506,9 +500,10 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
           SizedBox(
             height: 20.0,
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton.icon(
+              TextButton.icon(
                 icon: Icon(Icons.camera),
                 onPressed: () {
                   takePhoto(ImageSource.camera);
@@ -518,25 +513,26 @@ class _CaretakerHomepageState extends State<CaretakerHomepage> {
               SizedBox(
                 width: 50.0,
               ),
-              FlatButton.icon(
+              TextButton.icon(
                 icon: Icon(Icons.image),
                 onPressed: () {
                   takePhoto(ImageSource.gallery);
                 },
                 label: Text("Gallery"),
               ),
-
-            ],)
+            ],
+          )
         ],
       ),
     );
   }
 
   void takePhoto(ImageSource source) async {
-    final pickedFile = await _picker.getImage(source: source,);
+    final pickedFile = await _picker.pickImage(
+      source: source,
+    );
     setState(() {
       _imageFile = pickedFile;
     });
   }
-
 }
